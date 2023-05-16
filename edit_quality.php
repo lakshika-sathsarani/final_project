@@ -3,11 +3,12 @@
 	include_once('config.php');
 
 	if(isset($_POST['edit'])){
+		$ifsno = $_POST['ifsno'];
         $tireno = $_POST['tireno'];
 		$visualinspectionchecklist = $_POST['visualinspectionchecklist'];
 		$hardness = $_POST['hardness'];
         $ultrasonictestresults = $_POST['ultrasonictestresults'];
-		$sql = "UPDATE quality SET tireno = '$tireno' , visualinspectionchecklist = '$visualinspectionchecklist' , hardness = '$hardness' , ultrasonictestresults = '$ultrasonictestresults' WHERE tireno = '$tireno'";
+		$sql = "UPDATE quality SET ifsno = '$ifsno' , tireno = '$tireno' , visualinspectionchecklist = '$visualinspectionchecklist' , hardness = '$hardness' , ultrasonictestresults = '$ultrasonictestresults' WHERE tireno = '$tireno'";
 
 		//use for MySQLi OOP
 		if($conn->query($sql)){

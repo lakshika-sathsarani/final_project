@@ -12,6 +12,20 @@
 				<input type="hidden" class="form-control" name="id" value="<?php echo $row['id']; ?>">
 				<div class="row form-group">
 					<div class="col-sm-2">
+						<label class="control-label modal-label">IFS No:</label>
+					</div>
+					<div class="col-sm-10">
+					<select name="ifsno">
+					<option value="BOC4563987">BOC4563987</option>
+                       <option value="ZCM4528745">ZCM4528745</option>
+					   <option value="QWE4563987">QWE4563987</option>
+                       <option value="POI4528745">POI4528745</option>
+                    </select>
+					</div>
+				</div>
+
+                <div class="row form-group">
+					<div class="col-sm-2">
 						<label class="control-label modal-label">Tire No:</label>
 					</div>
 					<div class="col-sm-10">

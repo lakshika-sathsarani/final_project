@@ -3,6 +3,7 @@
 	include_once('config.php');
 
 	if(isset($_POST['add'])){
+		$ifsno = $_POST['ifsno'];
 		$tireno = $_POST['tireno'];
 		$visualinspectionchecklist = $_POST['visualinspectionchecklist'];
 		$hardness = $_POST['hardness'];

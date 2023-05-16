@@ -13,6 +13,31 @@
 
 			<form method="POST" action="add_quality.php">
 
+			<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label modal-label">IFSno:</label>
+					</div>
+					<div class="col-sm-10">
+					<select name="ifsno" class="form-control">
+						<?php  
+							$select_product = mysqli_query($conn, "SELECT * FROM `product`") or die('query failed');
+							if(mysqli_num_rows($select_product) > 0){
+								while($fetch_product = mysqli_fetch_assoc($select_product)){
+						?>
+						<form action="add_unloading.php" method="post">
+							<?php echo $fetch_product['ifsno']; ?>
+							<option value="<?php echo $fetch_product['ifsno'];?>"><?php echo $fetch_product['ifsno']; ?></option>
+						</form>
+						<?php
+							}
+						}else{
+							echo '<p class="empty">no products added yet!</p>';
+						}
+						?>
+                    </select>
+					</div>
+				</div>
+
             <div class="row form-group">
 					<div class="col-sm-2">
 						<label class="control-label modal-label">Tire no:</label>

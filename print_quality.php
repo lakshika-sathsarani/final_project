@@ -9,6 +9,7 @@
 		while($row = $query->fetch_assoc()){
 			$contents .= "
 			<tr>
+      <td>".$row['ifsno']."</td>
       <td>".$row['id']."</td>
       <td>".$row['tireno']."</td>
       <td>".$row['visualinspectionchecklist']."</td>
@@ -43,7 +44,8 @@
       	<h4>management information Table - Quality Section</h4>
       	<table border="1" cellspacing="0" cellpadding="3">
            <tr>
-                <th width="5%">ID</th>
+        <th width="5%">IFS No</th>
+        <th width="5%">ID</th>
 				<th width="20%">Tire no</th>
 				<th width="20%">Visual inspection check list</th>
 				<th width="25%">Hardness</th>

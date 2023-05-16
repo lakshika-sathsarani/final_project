@@ -150,6 +150,7 @@ if(!isset($_SESSION['user_name'])){
                 <table id="myTable" class="table table-bordered table-striped">
                   <thead>
                     <th>ID</th>
+                    <th>IFS No</th>
                     <th>Tire no</th>
                     <th>Visual inspection check list</th>
                     <th>Hardness</th>
@@ -167,6 +168,7 @@ if(!isset($_SESSION['user_name'])){
                       echo
                         "<tr>
                           <td>".$row['id']."</td>
+                          <td>".$row['ifsno']."</td>
                           <td>".$row['tireno']."</td>
                           <td>".$row['visualinspectionchecklist']."</td>
                           <td>".$row['hardness']."</td>
