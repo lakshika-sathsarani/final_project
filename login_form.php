@@ -46,7 +46,7 @@ if(isset($_POST['submit'])){
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>login form</title>
-   <link rel="icon" type="image/x-icon" href="src/stellana-logotype.png">
+   <link rel="icon" type="image/x-icon" href="src/stellana.png">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
@@ -68,7 +68,7 @@ if(isset($_POST['submit'])){
       <input type="email" name="email" required placeholder="enter your email">
       <input type="password" name="password" required placeholder="enter your password">
       <input type="submit" name="submit" value="login now" class="form-btn">
-      <p>don't have an account? <a href="register_form.php">register now</a></p>
+      <p>Don't have an account? <a href="register_form.php">Register now</a></p>
    </form>
 
 </div>

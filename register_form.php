@@ -40,8 +40,8 @@ if(isset($_POST['submit'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>stellana</title>
-   
+   <title>register</title>
+   <link rel="icon" type="image/x-icon" href="src/stellana.png">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
          <option value="admin">admin</option>
       </select>
       <input type="submit" name="submit" value="register now" class="form-btn">
-      <p>already have an account? <a href="login_form.php">login now</a></p>
+      <p>Already have an account? <a href="login_form.php">Login now</a></p>
    </form>
 
 </div>

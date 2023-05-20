@@ -114,3 +114,93 @@
         </div>
     </div>
 </div>
+
+
+<!-- Barcode -->
+<div class="modal fade" id="barcode<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <center><h4 class="modal-title" id="myModalLabel">Barcode Generate</h4></center>
+            </div>
+            <div class="modal-body">
+			<div class="container-fluid">
+			<form method="POST" action="barcode.php">
+				<input type="hidden" class="form-control" name="id" value="<?php echo $row['id']; ?>">
+				
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label modal-label">IFSno:</label>
+					</div>
+					<div class="col-sm-10">
+					<select name="ifsno" class="form-control">
+						<?php  
+							$select_product = mysqli_query($conn, "SELECT * FROM `product`") or die('query failed');
+							if(mysqli_num_rows($select_product) > 0){
+								while($fetch_product = mysqli_fetch_assoc($select_product)){
+						?>
+						<form action="add_unloading.php" method="post">
+							<?php echo $fetch_product['ifsno']; ?>
+							<option value="<?php echo $fetch_product['ifsno'];?>"><?php echo $fetch_product['ifsno']; ?></option>
+						</form>
+						<?php
+							}
+						}else{
+							echo '<p class="empty">no products added yet!</p>';
+						}
+						?>
+                    </select>
+					</div>
+				</div>
+
+            <div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label modal-label">Tire no:</label>
+					</div>
+				<div class="col-sm-10">
+				<select name="tireno" class="form-control">
+						<?php  
+							$select_tireno = mysqli_query($conn, "SELECT * FROM `base`") or die('query failed');
+							if(mysqli_num_rows($select_tireno) > 0){
+								while($fetch_tireno = mysqli_fetch_assoc($select_tireno)){
+						?>
+						<form action="add_quality.php" method="post">
+							<?php echo $fetch_tireno['tireno']; ?>
+							<option value="<?php echo $fetch_tireno['tireno'];?>"><?php echo $fetch_tireno['tireno']; ?></option>
+						</form>
+						<?php
+							}
+						}else{
+							echo '<p class="empty">no products added yet!</p>';
+						}
+						?>
+                    </select>
+				</div>
+				</div>
+
+           
+
+			<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label modal-label">Barcode Quantity:</label>
+					</div>
+					<div class="col-sm-10">          
+                    	 <input  type="text" class="form-control" name="print_qty" >
+      				</div>
+				</div>
+
+				</div>
+			</div>
+				
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                <button type="submit" name="edit" class="btn btn-success"><span class="glyphicon glyphicon-check"></span> Generate</a>
+			</form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

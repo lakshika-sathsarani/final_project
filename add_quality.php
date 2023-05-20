@@ -8,7 +8,7 @@
 		$visualinspectionchecklist = $_POST['visualinspectionchecklist'];
 		$hardness = $_POST['hardness'];
         $ultrasonictestresults = $_POST['ultrasonictestresults'];
-		$sql = "INSERT INTO quality (tireno, visualinspectionchecklist, hardness, ultrasonictestresults) VALUES ('$tireno', '$visualinspectionchecklist', '$hardness', '$ultrasonictestresults')";
+		$sql = "INSERT INTO quality (ifsno, tireno, visualinspectionchecklist, hardness, ultrasonictestresults) VALUES ('$ifsno' , '$tireno', '$visualinspectionchecklist', '$hardness', '$ultrasonictestresults')";
 
 		//use for MySQLi OOP
 		if($conn->query($sql)){

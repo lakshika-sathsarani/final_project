@@ -16,7 +16,8 @@ if(!isset($_SESSION['user_name'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Quality page</title>
+   <title>Quality</title>
+   <link rel="icon" type="image/x-icon" href="src/stellana.png">
    <!-- Boxiocns CDN Link -->
    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
    <!-- custom css file link  -->
@@ -142,7 +143,7 @@ if(!isset($_SESSION['user_name'])){
             <div class="row">
               <a href="#addnewQuality" data-toggle="modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New</a>
               <a href="print_quality.php" class="btn btn-success pull-right"><span class="glyphicon glyphicon-print"></span> PDF</a>
-            </div>
+              </div>
 
 			      <div class="height10"></div>
 			
@@ -176,9 +177,12 @@ if(!isset($_SESSION['user_name'])){
                           <td>
                             <a href='#edit_".$row['id']."' class='btn btn-success btn-sm' data-toggle='modal'><span class='glyphicon glyphicon-edit'></span> Edit</a>
                             <a href='#delete_".$row['id']."' class='btn btn-danger btn-sm' data-toggle='modal'><span class='glyphicon glyphicon-trash'></span> Delete</a>
+                            <a href='#barcode".$row['id']."' class='btn btn-success btn-sm' data-toggle='modal'><span class='glyphicon glyphicon-barcode'></span> Barcode</a>
+                           
                           </td>
                         </tr>";
                       include('edit_delete_quality.php');
+                      
                       }
                     ?>
 					        </tbody>

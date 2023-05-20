@@ -16,7 +16,8 @@ if(!isset($_SESSION['user_name'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>user page</title>
+   <title>investory</title>
+   <link rel="icon" type="image/x-icon" href="src/stellana.png">
    <!-- Boxiocns CDN Link -->
    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
    <!-- custom css file link  -->
@@ -61,7 +62,7 @@ if(!isset($_SESSION['user_name'])){
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Products</a></li>
           <li><a href="add_product.php">Add Product</a></li>
-          <li><a href="qty.php">View Qty</a></li>
+          <li><a href="vproduct.php">View Qty</a></li>
         </ul>
       </li>
       <li>

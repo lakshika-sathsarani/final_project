@@ -16,7 +16,8 @@ if(!isset($_SESSION['user_name'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>admin page</title>
+   <title>Dashboard</title>
+   <link rel="icon" type="image/x-icon" href="src/stellana.png">
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -114,45 +115,44 @@ if(!isset($_SESSION['user_name'])){
     </div>
     
     <div class="container">
-	<h1 class="page-header text-center">Dashboard</h1>
-  <div class="box-container">
-<div class="box">
-   <?php 
-      $select_users = mysqli_query($conn, "SELECT * FROM `user_form` WHERE user_type = 'user'") or die('query failed');
-      $number_of_users = mysqli_num_rows($select_users);
-   ?>
-   <h3><?php echo $number_of_users; ?></h3>
-   <p>normal users</p>
-</div>
+	    <h1 class="page-header text-center">Dashboard</h1>
+    <div class="box-container">
+    <div class="box">
+        <?php 
+            $select_users = mysqli_query($conn, "SELECT * FROM `user_form` WHERE user_type = 'user'") or die('query failed');
+            $number_of_users = mysqli_num_rows($select_users);
+        ?>
+        <h3><?php echo $number_of_users; ?></h3>
+        <p>normal users</p>
+      </div>
 
-<div class="box">
-   <?php 
-      $select_admins = mysqli_query($conn, "SELECT * FROM `user_form` WHERE user_type = 'admin'") or die('query failed');
-      $number_of_admins = mysqli_num_rows($select_admins);
-   ?>
-   <h3><?php echo $number_of_admins; ?></h3>
-   <p>admin users</p>
-</div>
+      <div class="box">
+        <?php 
+            $select_admins = mysqli_query($conn, "SELECT * FROM `user_form` WHERE user_type = 'admin'") or die('query failed');
+            $number_of_admins = mysqli_num_rows($select_admins);
+        ?>
+        <h3><?php echo $number_of_admins; ?></h3>
+        <p>Admin users</p>
+      </div>
 
 
-   <?php 
-      $select_account = mysqli_query($conn, "SELECT * FROM `user_form`") or die('query failed');
-      $number_of_account = mysqli_num_rows($select_account);
-   ?>
-   <tr><td><?php echo $number_of_account; ?></td></tr>
-   <thead><th>total accounts</th></thead>
+        <?php 
+            $select_account = mysqli_query($conn, "SELECT * FROM `user_form`") or die('query failed');
+            $number_of_account = mysqli_num_rows($select_account);
+        ?>
+        <tr><td><?php echo $number_of_account; ?></td></tr>
+        <thead><th>Total accounts</th></thead>
 
-<div class="box">
-   <?php 
-      $select_id = mysqli_query($conn, "SELECT * FROM `base`") or die('query failed');
-      $number_of_id = mysqli_num_rows($select_id);
-   ?>
-   <h3><?php echo $number_of_id; ?></h3>
-   <p>manufacterd product</p>
-</div>
-
-</div>
-
+      <div class="box">
+        <?php 
+            $select_id = mysqli_query($conn, "SELECT * FROM `base`") or die('query failed');
+            $number_of_id = mysqli_num_rows($select_id);
+        ?>
+        <h3><?php echo $number_of_id; ?></h3>
+        <p>Manufacterd product</p>
+      </div>
+  </div>
+    
   </section>
 
 

@@ -16,15 +16,12 @@ span { font-size: 13px;}
 <body onload="window.print();">
 	<div style="margin-left: 5%">
 		<?php
-		include 'generate.php';
+		include 'generate_barcode.php';
+		$ifsno = $_POST['ifsno'];
 		$tireno = $_POST['tireno'];
-		$visualinspectionchecklist = $_POST['visualinspectionchecklist'];
-		$hardness = $_POST['hardness'];
-        $ultrasonictestresults = $_POST['ultrasonictestresults'];
-		$rate = $_POST['rate'];
-
+		
 		for($i=1;$i<=$_POST['print_qty'];$i++){
-			echo "<p class='inline'><span ><b> </b></span>".bar128(stripcslashes($_POST['tireno']))."<span ><b> ".$rate." </b><span></p>&nbsp&nbsp&nbsp&nbsp";
+			echo "<p class='inline'><span ><b> $ifsno</b></span>".bar128(stripcslashes($_POST['tireno']))."</p>&nbsp&nbsp&nbsp&nbsp";
 		}
 
 		?>
