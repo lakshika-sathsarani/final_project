@@ -78,6 +78,19 @@ if(!isset($_SESSION['user_name'])){
         </ul>
       </li>
       <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">User</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">User</a></li>
+          <li><a href="user.php">Manage User</a></li>
+        </ul>
+      </li>
+      <li>
     <div class="profile-details">
       <div class="profile-content">
         <!--<img src="image/profile.jpg" alt="profileImg">-->
